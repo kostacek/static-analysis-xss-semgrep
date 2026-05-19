@@ -32,7 +32,7 @@ Severity: High
 Risk: Authentication bypass and unauthorized database access
 Impact: Exposure of sensitive employee records and potential full database compromise
 🖼️ Vulnerability
-images/semgrep-findings.png
+![Alt text](images/SQL_Injection_Vulnerability.png)
 💥 Exploit
 
 🛡️ Fix
@@ -60,7 +60,7 @@ Severity: Critical
 Risk: Arbitrary command execution on the server
 Impact: Full system compromise, data destruction, or remote control of the application host
 🖼️ Vulnerability
-images/semgrep-findings.png
+![Alt text](images/filename.png)
 💥 Exploit
 images/semgrep-findings.png
 🛡️ Fix

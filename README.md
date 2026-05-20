@@ -23,94 +23,131 @@ It includes:
 ## 🧨 1. SQL Injection
 
 ### ✔ Vulnerability
+
 ```java
 String queryString = "SELECT * FROM Employees WHERE username = '" 
     + employee_username + "' AND password = '" + employee_password + "'";
-🔎 Risk Impact
-Severity: High
-Risk: Authentication bypass and unauthorized database access
-Impact: Exposure of sensitive employee records and potential full database compromise
-🖼️ Vulnerability
-![Alt text](images/SQL_Injection_Vulnerability.png)
-💥 Exploit
+```
 
-🛡️ Fix
-images/semgrep-findings.png
-🧨 2. Cross-Site Scripting (XSS)
-✔ Vulnerability
-images/semgrep-findings.png
+### 🔎 Risk Impact
+- **Severity:** High
+- **Risk:** Authentication bypass and unauthorized database access
+- **Impact:** Exposure of sensitive employee records and potential full database compromise
+
+### 🖼️ Vulnerability
+![SQL Injection Vulnerability](images/SQL_Injection_Vulnerability.png)
+
+### 💥 Exploit
+![SQL Injection Exploit](images/Exploit.png)
+
+### 🛡️ Fix
+![SQL Injection Fix](images/Parameterized_Queries.png)
+## 🧨 2. Cross-Site Scripting (XSS)
+
+### ✔ Vulnerability
 Unencoded user input rendered directly in HTML/JS.
 
-🔎 Risk Impact
-Severity: High
-Risk: Execution of malicious scripts in a user’s browser
-Impact: Session hijacking, credential theft, and unauthorized user actions
-🖼️ Vulnerability
-images/semgrep-findings.png
-🛡️ Fix
-images/semgrep-findings.png
-🧨 3. Command Injection
-✔ Vulnerability
-![Command Injection Exploit](images/Command_injection_Exploit.png)
+### 🔎 Risk Impact
+- **Severity:** High  
+- **Risk:** Execution of malicious scripts in a user’s browser  
+- **Impact:** Session hijacking, credential theft, and unauthorized user actions  
+
+### 🖼️ Vulnerability
+![XSS Vulnerability](images/semgrep-findings.png)
+
+### 🛡️ Fix
+![XSS Fix](images/Context_Aware_encoding.png)
+
+---
+
+## 🧨 3. Command Injection
+
+### ✔ Vulnerability
 User input passed directly into system command.
 
-🔎 Risk Impact
-Severity: Critical
-Risk: Arbitrary command execution on the server
-Impact: Full system compromise, data destruction, or remote control of the application host
-🖼️ Vulnerability
-![Alt text](images/filename.png)
-💥 Exploit
-images/semgrep-findings.png
-🛡️ Fix
-images/semgrep-findings.png
-🧨 4. Path Traversal
-✔ Vulnerability
+### 🔎 Risk Impact
+- **Severity:** Critical  
+- **Risk:** Arbitrary command execution on the server  
+- **Impact:** Full system compromise, data destruction, or remote control of the application host  
 
+### 🖼️ Vulnerability
+![Command Injection Vulnerability](images/Command_injection_Vulnerability.png)
+
+### 💥 Exploit
+![Command Injection Exploit](images/Command_injection_Exploit.png)
+
+### 🛡️ Fix
+![Command Injection Fix](images/Command_injection_Fix.png)
+
+---
+
+## 🧨 4. Path Traversal
+
+### ✔ Vulnerability
 User-controlled file paths allow directory traversal.
 
-🔎 Risk Impact
-Severity: High
-Risk: Unauthorized access to system files
-Impact: Exposure of configuration files, credentials, or sensitive application data
-🖼️ Vulnerability
-(/images/semgrep-findings.png
-💥 Exploit
-images/semgrep-findings.png
-🛡️ Fix
-images/semgrep-findings.png
-🧨 5. XPath Injection
-✔ Vulnerability
+### 🔎 Risk Impact
+- **Severity:** High  
+- **Risk:** Unauthorized access to system files  
+- **Impact:** Exposure of configuration files, credentials, or sensitive application data  
 
+### 🖼️ Vulnerability
+![Path Traversal Vulnerability](images/Path_Manipulation_Vulnerability.png)
+
+### 💥 Exploit
+![Path Traversal Exploit](images/Path_Manipulation_Exploit.png)
+
+### 🛡️ Fix
+![Path Traversal Fix](images/Path_Manipulation_Fix.png)
+
+---
+
+## 🧨 5. XPath Injection
+
+### ✔ Vulnerability
 User input concatenated into XPath query.
 
-🔎 Risk Impact
-Severity: High
-Risk: Unauthorized querying of XML data
-Impact: Exposure of sensitive structured data and authentication bypass
-🖼️ Vulnerability
-(images/Command_injection_Exploit.png)
-💥 Exploit
-images/semgrep-findings.png
-🛡️ Fix
-images/semgrep-findings.png
-🧨 6. SMTP Header Injection
-✔ Vulnerability
+### 🔎 Risk Impact
+- **Severity:** High  
+- **Risk:** Unauthorized querying of XML data  
+- **Impact:** Exposure of sensitive structured data and authentication bypass  
 
+### 🖼️ Vulnerability
+![XPath Injection Vulnerability](images/XPath_Injection_Vulneability.png)
+
+### 💥 Exploit
+![XPath Injection Exploit](images/XPath_Injection_Exploit.png)
+
+### 🛡️ Fix
+![XPath Injection Fix](images/XPath_Injection_Fix.png)
+
+---
+
+## 🧨 6. SMTP Header Injection
+
+### ✔ Vulnerability
 User input inserted into email headers.
 
-🔎 Risk Impact
-Severity: Medium
-Risk: Email header manipulation and unauthorized message routing
-Impact: Spam distribution, phishing campaigns, and reputational damage
-🖼️ Vulnerability
-images/semgrep-findings.png
-💥 Exploit
-images/semgrep-findings.png
-🛡️ Fix
-images/semgrep-findings.png
-🧪 Static Analysis with Semgrep
-🔍 Findings
+### 🔎 Risk Impact
+- **Severity:** Medium  
+- **Risk:** Email header manipulation and unauthorized message routing  
+- **Impact:** Spam distribution, phishing campaigns, and reputational damage  
+
+### 🖼️ Vulnerability
+![SMTP Vulnerability](images/SMTP_Vulnerability.png)
+
+### 💥 Exploit
+![SMTP Exploit](images/SMTP_Exploit.png)
+
+### 🛡️ Fix
+![SMTP Fix](images/SMTP_Fix.png)
+
+---
+
+## 🧪 Static Analysis with Semgrep
+
+### 🔍 Findings
+![Semgrep Findings](images/semgrep-findings.png)
 
 🛡️ Summary of Mitigations
 

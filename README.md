@@ -26,7 +26,6 @@ It includes:
 ```java
 String queryString = "SELECT * FROM Employees WHERE username = '" 
     + employee_username + "' AND password = '" + employee_password + "'";
-
 🔎 Risk Impact
 Severity: High
 Risk: Authentication bypass and unauthorized database access
